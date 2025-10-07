@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Health Connect Exercise</string>
+
+    <string name="home_screen_title">My Exercise Logs</string>
+    <string name="sync_logs_description">Sync Logs</string>
+    <string name="conflicts_description">Conflicts</string>
+    <string name="add_exercise_description">Add Exercise</string>
+    <string name="error_prefix">Error: %1$s</string>
+    <string name="no_logs_yet">No exercise logs found. Use the Sync button on the top-right to import from Health Connect or add logs manually.</string>
+ <string name="conflicts_detected_toast">%1$d conflict(s) detected!</string>
+
+    <string name="splash_screen_logo_description">App Logo</string>
+    <string name="splash_screen_welcome_message">Welcome to Health Connect Exercise</string>
+
+    <string name="conflict_description">Conflict</string>
+    <string name="duration_minutes_label">Duration: %1$d min</string>
+    <string name="calories_label">Calories: %1$s</string>
+    <string name="id_label">Id: %1$s</string>
+    <string name="start_time">Start Time: %1$s</string>
+    <string name="end_time">End Time: %1$s</string>
+    <string name="source_label">Source: %1$s</string>
+    <string name="keep_button">Keep</string>
+    <string name="confirm_keep_dialog_title">Confirm Keep</string>
+    <string name="confirm_keep_dialog_text">If you keep this log, the other conflicting logs will be automatically deleted.</string>
+    <string name="dialog_confirm_button">Yes, Keep</string>
+    <string name="dialog_cancel_button">Cancel</string>
+    <string name="dialog_permission_request">Grant Permission</string>
+
+</resources>
