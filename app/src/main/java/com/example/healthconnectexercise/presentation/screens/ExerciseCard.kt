@@ -38,7 +38,6 @@ import com.example.healthconnectexercise.domain.model.ExerciseLog
 import com.example.healthconnectexercise.presentation.viewmodel.ExerciseViewModel
 import java.text.SimpleDateFormat
 import java.util.Date
-import kotlin.text.format
 import java.util.Locale
 
 @Composable

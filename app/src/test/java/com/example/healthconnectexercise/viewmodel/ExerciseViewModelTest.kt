@@ -95,7 +95,7 @@ class ExerciseViewModelTest {
     @Test
     fun `onSyncClick with permissions - triggers load()`() = runTest {
         coEvery { mockHealthConnectManager.hasAllPermissions() } returns true
-        viewModel.onSyncClick(mockk()) // Pass a dummy launcher
+        viewModel.onSyncClick() // Pass a dummy launcher
         testDispatcher.scheduler.advanceUntilIdle()
         coVerify { mockRepository.getMergedLogs() }
     }
@@ -103,7 +103,7 @@ class ExerciseViewModelTest {
     @Test
     fun `onSyncClick without permissions - shows rationale`() = runTest {
         coEvery { mockHealthConnectManager.hasAllPermissions() } returns false
-        viewModel.onSyncClick(mockk())
+        viewModel.onSyncClick()
         testDispatcher.scheduler.advanceUntilIdle()
         val showRationale = viewModel.showPermissionRationale.first()
         assertTrue(showRationale)

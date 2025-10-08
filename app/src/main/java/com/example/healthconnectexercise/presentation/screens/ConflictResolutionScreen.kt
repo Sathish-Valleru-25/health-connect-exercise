@@ -30,7 +30,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.input.key.type
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -38,8 +37,6 @@ import com.example.healthconnectexercise.domain.model.ExerciseLog
 import com.example.healthconnectexercise.presentation.viewmodel.ExerciseViewModel
 import java.text.SimpleDateFormat
 import java.util.Date
-import kotlin.text.format
-
 import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)

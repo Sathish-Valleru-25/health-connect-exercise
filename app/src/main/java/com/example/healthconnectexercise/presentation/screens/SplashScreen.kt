@@ -28,17 +28,12 @@ import kotlinx.coroutines.delay
 @Composable
 fun SplashScreen(onNavigateToHome: () -> Unit) {
     val alpha = remember { Animatable(0f) }
-
-    // This effect runs once when the SplashScreen is composed.
     LaunchedEffect(Unit) {
-        // Animate the alpha of the icon to fade in
         alpha.animateTo(
             targetValue = 1f,
             animationSpec = tween(durationMillis = 1500)
         )
-        // Wait for a bit after the fade-in
         delay(1000L)
-        // Trigger the navigation to the home screen
         onNavigateToHome()
     }
 
@@ -51,7 +46,6 @@ fun SplashScreen(onNavigateToHome: () -> Unit) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(16.dp),
-            // Apply the alpha animation to the entire column
             modifier = Modifier.alpha(alpha.value)){
 
                     Icon(
@@ -59,7 +53,7 @@ fun SplashScreen(onNavigateToHome: () -> Unit) {
             contentDescription = "App Logo",
             modifier = Modifier
                 .size(128.dp)
-                .alpha(alpha.value), // Bind the alpha to the animation value
+                .alpha(alpha.value),
             tint = MaterialTheme.colorScheme.primary
         )
         Text(

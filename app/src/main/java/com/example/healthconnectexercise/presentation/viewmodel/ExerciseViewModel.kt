@@ -38,15 +38,11 @@ class ExerciseViewModel @Inject constructor(
 
 
 
-    fun onSyncClick(
-        permissionLauncher: ManagedActivityResultLauncher<Set<String>, Set<String>>
-    ) {
+    fun onSyncClick() {
         viewModelScope.launch {
             if (healthConnectManager.hasAllPermissions()) {
-                // If permissions are already granted, just sync.
                 load()
             } else {
-                // If permissions are NOT granted, show the rationale dialog first.
                 _showPermissionRationale.value = true
             }
         }
@@ -54,7 +50,7 @@ class ExerciseViewModel @Inject constructor(
     fun launchPermissionsRequest(
         permissionLauncher: ManagedActivityResultLauncher<Set<String>, Set<String>>
     ) {
-        _showPermissionRationale.value = false // Hide the dialog
+        _showPermissionRationale.value = false
         permissionLauncher.launch(healthConnectManager.requiredPermissions) // Launch the actual system prompt
     }
 

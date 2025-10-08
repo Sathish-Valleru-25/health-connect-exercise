@@ -24,8 +24,6 @@ fun NavGraph(navController: NavHostController) {
     }
 
     LaunchedEffect(Unit) {
-        // If permissions are already granted when the app starts, load the data.
-        // Otherwise, do nothing and wait for the user to tap "Sync".
         if (sharedVm.healthConnectManager.hasAllPermissions()) {
             sharedVm.load()
         }
@@ -50,9 +48,7 @@ fun NavGraph(navController: NavHostController) {
                 onAdd = { navController.navigate("add") },
                 onConflicts = { navController.navigate("conflicts") },
                 onSync = {
-                    sharedVm.onSyncClick(
-                  permissionLauncher
-                    )
+                    sharedVm.onSyncClick()
                 },
                 vm = sharedVm,
                 permissionLauncher = permissionLauncher
