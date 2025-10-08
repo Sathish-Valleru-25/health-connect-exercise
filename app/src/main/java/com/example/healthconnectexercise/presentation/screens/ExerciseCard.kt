@@ -89,14 +89,11 @@ fun ExerciseCard(
                     )
                 }
             }
-
             Text(
                 style = MaterialTheme.typography.bodyLarge.copy(color = MaterialTheme.colorScheme.outline,
                     fontWeight = FontWeight.Bold),
-                text = stringResource(R.string.duration_minutes_label, (log.end - log.start) / 60000),
-
-
-                )
+                text = stringResource(R.string.duration_minutes_label, (log.end - log.start) / 60000)
+            )
             Text(
                 text = stringResource(R.string.start_time, timeFormatter.format(Date(log.start))),
                 style = MaterialTheme.typography.bodySmall.copy(color = MaterialTheme.colorScheme.outline)
